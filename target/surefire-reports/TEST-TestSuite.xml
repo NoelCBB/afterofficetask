@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="0.287" tests="16" errors="0" skipped="2" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="2.159" tests="5" errors="0" skipped="0" failures="0">
   <properties>
     <property name="gopherProxySet" value="false"/>
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
@@ -11,13 +11,13 @@
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.vendor.url" value="https://openjdk.java.net/"/>
-    <property name="user.timezone" value="Asia/Jakarta"/>
+    <property name="user.timezone" value=""/>
     <property name="java.vm.specification.version" value="11"/>
     <property name="os.name" value="Mac OS X"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-11.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/bytedance/CourseQAAutomation/APIAdvance/apiautomationadvance/target/surefire/surefirebooter-20241124213252389_3.jar /Users/bytedance/CourseQAAutomation/APIAdvance/apiautomationadvance/target/surefire 2024-11-24T21-32-52_325-jvmRun1 surefire-20241124213252389_1tmp surefire_0-20241124213252389_2tmp"/>
+    <property name="sun.java.command" value="/Users/bytedance/CourseQAAutomation/APIAdvance/apiautomationadvance/target/surefire/surefirebooter1535400166302244218.jar /Users/bytedance/CourseQAAutomation/APIAdvance/apiautomationadvance/target/surefire 2024-11-25T20-39-58_299-jvmRun1 surefire3104400662041926708tmp surefire_04440716357056077125tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/bytedance/CourseQAAutomation/APIAdvance/apiautomationadvance/target/test-classes:/Users/bytedance/CourseQAAutomation/APIAdvance/apiautomationadvance/target/classes:/Users/bytedance/.m2/repository/org/testng/testng/7.4.0/testng-7.4.0.jar:/Users/bytedance/.m2/repository/com/beust/jcommander/1.78/jcommander-1.78.jar:/Users/bytedance/.m2/repository/org/webjars/jquery/3.5.1/jquery-3.5.1.jar:/Users/bytedance/.m2/repository/io/rest-assured/rest-assured/5.4.0/rest-assured-5.4.0.jar:/Users/bytedance/.m2/repository/org/apache/groovy/groovy/4.0.16/groovy-4.0.16.jar:/Users/bytedance/.m2/repository/org/apache/groovy/groovy-xml/4.0.16/groovy-xml-4.0.16.jar:/Users/bytedance/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/Users/bytedance/.m2/repository/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar:/Users/bytedance/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/bytedance/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar:/Users/bytedance/.m2/repository/org/apache/httpcomponents/httpmime/4.5.13/httpmime-4.5.13.jar:/Users/bytedance/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/bytedance/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/Users/bytedance/.m2/repository/io/rest-assured/json-path/5.4.0/json-path-5.4.0.jar:/Users/bytedance/.m2/repository/org/apache/groovy/groovy-json/4.0.16/groovy-json-4.0.16.jar:/Users/bytedance/.m2/repository/io/rest-assured/rest-assured-common/5.4.0/rest-assured-common-5.4.0.jar:/Users/bytedance/.m2/repository/io/rest-assured/xml-path/5.4.0/xml-path-5.4.0.jar:/Users/bytedance/.m2/repository/org/apache/commons/commons-lang3/3.11/commons-lang3-3.11.jar:/Users/bytedance/.m2/repository/org/json/json/20210307/json-20210307.jar:/Users/bytedance/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.0/jackson-databind-2.15.0.jar:/Users/bytedance/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.0/jackson-annotations-2.15.0.jar:/Users/bytedance/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.0/jackson-core-2.15.0.jar:/Users/bytedance/.m2/repository/io/cucumber/cucumber-java/5.2.0/cucumber-java-5.2.0.jar:/Users/bytedance/.m2/repository/io/cucumber/cucumber-core/5.2.0/cucumber-core-5.2.0.jar:/Users/bytedance/.m2/repository/io/cucumber/cucumber-gherkin/5.2.0/cucumber-gherkin-5.2.0.jar:/Users/bytedance/.m2/repository/io/cucumber/cucumber-gherkin-vintage/5.2.0/cucumber-gherkin-vintage-5.2.0.jar:/Users/bytedance/.m2/repository/io/cucumber/tag-expressions/2.0.4/tag-expressions-2.0.4.jar:/Users/bytedance/.m2/repository/io/cucumber/cucumber-expressions/8.3.1/cucumber-expressions-8.3.1.jar:/Users/bytedance/.m2/repository/io/cucumber/datatable/3.3.0/datatable-3.3.0.jar:/Users/bytedance/.m2/repository/io/cucumber/cucumber-plugin/5.2.0/cucumber-plugin-5.2.0.jar:/Users/bytedance/.m2/repository/io/cucumber/docstring/5.2.0/docstring-5.2.0.jar:/Users/bytedance/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/Users/bytedance/.m2/repository/io/cucumber/cucumber-jvm-deps/1.0.6/cucumber-jvm-deps-1.0.6.jar:/Users/bytedance/.m2/repository/io/cucumber/cucumber-junit/5.2.0/cucumber-junit-5.2.0.jar:/Users/bytedance/.m2/repository/junit/junit/4.13/junit-4.13.jar:/Users/bytedance/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -33,12 +33,12 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="/Users/bytedance/CourseQAAutomation/APIAdvance/apiautomationadvance/target/surefire/surefirebooter-20241124213252389_3.jar"/>
+    <property name="surefire.real.class.path" value="/Users/bytedance/CourseQAAutomation/APIAdvance/apiautomationadvance/target/surefire/surefirebooter1535400166302244218.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="11.0.21+9-LTS-193"/>
     <property name="user.name" value="bytedance"/>
     <property name="path.separator" value=":"/>
-    <property name="os.version" value="15.0"/>
+    <property name="os.version" value="15.1.1"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="file.encoding" value="UTF-8"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
@@ -60,126 +60,9 @@
     <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
     <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="testMethod1" classname="ParallelTest" time="0.007">
-    <system-out><![CDATA[Ini adalah test method1 di thread: 1
-]]></system-out>
-    <system-err><![CDATA[TestNG is commencing execution
-]]></system-err>
-  </testcase>
-  <testcase name="testMethod2" classname="ParallelTest" time="0.0">
-    <system-out><![CDATA[Ini adalah test method2 di thread: 1
-]]></system-out>
-  </testcase>
-  <testcase name="testMethod3" classname="ParallelTest" time="0.001">
-    <system-out><![CDATA[Ini adalah test method3 di thread: 1
-]]></system-out>
-  </testcase>
-  <testcase name="testRetry" classname="ParallelTest" time="0.0">
-    <skipped/>
-    <system-out><![CDATA[Execute test ini
-]]></system-out>
-  </testcase>
-  <testcase name="testRetry" classname="ParallelTest" time="0.0">
-    <skipped/>
-    <system-out><![CDATA[Execute test ini
-]]></system-out>
-  </testcase>
-  <testcase name="testRetry" classname="ParallelTest" time="0.001">
-    <failure type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError
-	at ParallelTest.testRetry(ParallelTest.java:22)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-]]></failure>
-    <system-out><![CDATA[Execute test ini
-]]></system-out>
-  </testcase>
-  <testcase name="dependMethod" classname="TestNG" time="0.0">
-    <system-out><![CDATA[Ini akan dijalankan sekali ketika setup class
-Ini akan dijalankan setiap scenario test dipanggil
-]]></system-out>
-  </testcase>
-  <testcase name="scenarioTest1" classname="TestNG" time="0.0">
-    <system-out><![CDATA[Ini akan dijalankan setelah setiap scenario/method dijalankan
-Ini akan dijalankan setiap scenario test dipanggil
-Ini adalah scenario test 1
-]]></system-out>
-  </testcase>
-  <testcase name="scenarioTestGroup1" classname="TestNG" time="0.0">
-    <system-out><![CDATA[Ini akan dijalankan setelah setiap scenario/method dijalankan
-Ini akan dijalankan setiap scenario test dipanggil
-Ini adalah scenario test group1
-]]></system-out>
-  </testcase>
-  <testcase name="scenarioTestGroup2" classname="TestNG" time="0.0">
-    <system-out><![CDATA[Ini akan dijalankan setelah setiap scenario/method dijalankan
-Ini akan dijalankan setiap scenario test dipanggil
-Ini adalah scenario test group2
-]]></system-out>
-  </testcase>
-  <testcase name="scenarioTest2" classname="TestNG" time="0.0">
-    <system-out><![CDATA[Ini akan dijalankan setelah setiap scenario/method dijalankan
-Ini akan dijalankan setiap scenario test dipanggil
-Ini adalah scenario test 2
-]]></system-out>
-  </testcase>
-  <testcase name="scenarioTestDataProvider[Albert, 25](1)" classname="TestNG" time="0.004">
-    <system-out><![CDATA[Ini akan dijalankan setelah setiap scenario/method dijalankan
-Ini akan dijalankan setiap scenario test dipanggil
-Data collection : Albert25
-]]></system-out>
-  </testcase>
-  <testcase name="scenarioTestDataProvider[Jeffry, 26](2)" classname="TestNG" time="0.0">
-    <system-out><![CDATA[Ini akan dijalankan setelah setiap scenario/method dijalankan
-Ini akan dijalankan setiap scenario test dipanggil
-Data collection : Jeffry26
-]]></system-out>
-  </testcase>
-  <testcase name="scenarioTestParams[Bootcamp API Automation](1)" classname="TestNG" time="0.001">
-    <system-out><![CDATA[Ini akan dijalankan setelah setiap scenario/method dijalankan
-Ini akan dijalankan setiap scenario test dipanggil
-Nama programnya adalah : Bootcamp API Automation
-]]></system-out>
-  </testcase>
-  <testcase name="test[42](1)" classname="TestNG" time="0.0">
-    <system-out><![CDATA[Ini akan dijalankan setelah setiap scenario/method dijalankan
-Ini akan dijalankan setiap scenario test dipanggil
-Hasilnya adalah: 42
-]]></system-out>
-  </testcase>
-  <testcase name="dependScenarioTest" classname="TestNG" time="0.0">
-    <system-out><![CDATA[Ini akan dijalankan setelah setiap scenario/method dijalankan
-Ini akan dijalankan setiap scenario test dipanggil
-Hasil dari get value dependency: Ini adalah class advance
-]]></system-out>
-  </testcase>
+  <testcase name="AddObject" classname="scenario.RestAssuredTest" time="0.651"/>
+  <testcase name="GetAllObjects" classname="scenario.RestAssuredTest" time="0.184"/>
+  <testcase name="UpdateObject" classname="scenario.RestAssuredTest" time="0.359"/>
+  <testcase name="DeleteDataObject" classname="scenario.RestAssuredTest" time="0.295"/>
+  <testcase name="GetAllObjectsByIds" classname="scenario.RestAssuredTest" time="0.185"/>
 </testsuite>

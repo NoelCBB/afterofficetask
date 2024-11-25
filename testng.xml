@@ -4,9 +4,7 @@
         <test name="MyTestGroup">
         <parameter name="program"  value="Bootcamp API Automation"/>
             <classes>
-                <class name="ParallelTest" />
-                 <class name="RetryTest" />
-                  <class name="TestNG" />
+                <class name="scenario.RestAssuredTest" />
             </classes>
         </test>
     </suite>
