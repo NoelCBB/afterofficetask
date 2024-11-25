@@ -4,11 +4,14 @@
   <test thread-count="5" name="MyTestGroup(failed)" verbose="0">
     <parameter name="program" value="Bootcamp API Automation"/>
     <classes>
-      <class name="ParallelTest">
+      <class name="scenario.RestAssuredTest">
         <methods>
-          <include name="testRetry"/>
+          <include name="AddObject"/>
+          <include name="GetAllObjectsByIds"/>
+          <include name="DeleteDataObject"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- ParallelTest -->
+      </class> <!-- scenario.RestAssuredTest -->
     </classes>
   </test> <!-- MyTestGroup(failed) -->
 </suite> <!-- Failed suite [Annotation Execution Suite] -->

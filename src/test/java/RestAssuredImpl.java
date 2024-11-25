@@ -1,3 +1,5 @@
+import org.testng.annotations.Test;
+
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
@@ -5,13 +7,14 @@ import io.restassured.specification.RequestSpecification;
 
 public class RestAssuredImpl {
     public static void main(String[] args) {
-        GetAllObjects();
+        // GetAllObjects();
         GetAllObjectsByIds();
         AddObject();
         UpdateObject();
     }
 
-    public static void GetAllObjects(){
+    @Test
+    public void GetAllObjects(){
         RestAssured.baseURI = "https://api.restful-api.dev/objects";
         RequestSpecification requestSpecification = RestAssured.given();
 
@@ -28,8 +31,6 @@ public class RestAssuredImpl {
         int statusCode = response.getStatusCode();
         System.out.println("Statuscode : " + statusCode);
         System.out.println("Response: " + response.asPrettyString());
-
-
     }
 
     public static void GetAllObjectsByIds(){
