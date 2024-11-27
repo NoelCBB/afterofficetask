@@ -1,15 +1,10 @@
 package scenario;
 
 import java.util.List;
-
-import org.json.JSONObject;
-import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.model.Item;
 
-import example.StaticProvider;
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
@@ -86,5 +81,4 @@ public class RestAssuredTest2 {
             System.out.println("===============");
         }
     }
-
 }
