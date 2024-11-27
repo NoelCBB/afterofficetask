@@ -1,0 +1,236 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2024-11-27T08:06:29.654Z",
+        "before": [
+          {
+            "result": {
+              "duration": 286886000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefenitions.StepDefenitions.setUp()"
+            }
+          }
+        ],
+        "line": 5,
+        "name": "As a user I can add new data",
+        "description": "",
+        "id": "end-to-end-simulation-test;as-a-user-i-can-add-new-data",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 765913000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "A list of item are available",
+            "match": {
+              "location": "stepdefenitions.StepDefenitions.a_list_of_item_are_available()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 343051000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I add item to list",
+            "match": {
+              "location": "stepdefenitions.StepDefenitions.i_add_item_to_list()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 151503000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "The item is available",
+            "match": {
+              "location": "stepdefenitions.StepDefenitions.the_item_is_available()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@addData"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-11-27T08:06:31.240Z",
+        "before": [
+          {
+            "result": {
+              "duration": 421000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefenitions.StepDefenitions.setUp()"
+            }
+          }
+        ],
+        "line": 12,
+        "name": "As a user I can update data",
+        "description": "",
+        "id": "end-to-end-simulation-test;as-a-user-i-can-update-data",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 195525000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "A list of item are available",
+            "match": {
+              "location": "stepdefenitions.StepDefenitions.a_list_of_item_are_available()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 177963000,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "I add item to list",
+            "match": {
+              "location": "stepdefenitions.StepDefenitions.i_add_item_to_list()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 159490000,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "The item is available",
+            "match": {
+              "location": "stepdefenitions.StepDefenitions.the_item_is_available()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 182855000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I can update that item",
+            "match": {
+              "location": "stepdefenitions.StepDefenitions.i_can_update_that_item()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@updateData"
+          },
+          {
+            "name": "@api"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-11-27T08:06:31.959Z",
+        "before": [
+          {
+            "result": {
+              "duration": 126000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefenitions.StepDefenitions.setUp()"
+            }
+          }
+        ],
+        "line": 18,
+        "name": "As a user I can delete data",
+        "description": "",
+        "id": "end-to-end-simulation-test;as-a-user-i-can-delete-data",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 164727000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "A list of item are available",
+            "match": {
+              "location": "stepdefenitions.StepDefenitions.a_list_of_item_are_available()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 196310000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I add item to list",
+            "match": {
+              "location": "stepdefenitions.StepDefenitions.i_add_item_to_list()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 167122000,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "The item is available",
+            "match": {
+              "location": "stepdefenitions.StepDefenitions.the_item_is_available()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 165639000,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "I delete that item",
+            "match": {
+              "location": "stepdefenitions.StepDefenitions.i_delete_that_item()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 142674000,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "The item isn\u0027t available",
+            "match": {
+              "location": "stepdefenitions.StepDefenitions.the_item_isn_t_available()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "End to End simulation Test",
+    "description": "Description: We will test some scenario implement E2E Test",
+    "id": "end-to-end-simulation-test",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/End2End_Test.feature",
+    "tags": []
+  }
+]

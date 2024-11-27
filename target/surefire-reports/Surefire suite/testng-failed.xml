@@ -8,13 +8,6 @@
           <include name="testRetry"/>
         </methods>
       </class> <!-- ParallelTest -->
-      <class name="scenario.RestAssuredTest">
-        <methods>
-          <include name="GetAllObjects"/>
-          <include name="UpdateObject" invocation-numbers="0"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- scenario.RestAssuredTest -->
     </classes>
   </test> <!-- Surefire test(failed) -->
 </suite> <!-- Failed suite [Surefire suite] -->
