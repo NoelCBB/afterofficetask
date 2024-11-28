@@ -3,12 +3,11 @@ package scenario;
 import java.util.List;
 import org.testng.annotations.Test;
 
-import com.model.Item;
-
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import model.response.ResponseItem;
 
 public class RestAssuredTest2 {
 
@@ -69,15 +68,14 @@ public class RestAssuredTest2 {
         System.out.println("Data : " + jsonPath.get("data"));
 
         //Deserialize JSON to Object 
-        List<Item> gItems = jsonPath.getList("", Item.class);
+        List<ResponseItem> gItems = jsonPath.getList("", ResponseItem.class);
         System.out.println("Result Item" + gItems);
 
-        for (Item item : gItems) {
+        for (ResponseItem item : gItems) {
             System.out.println("===============");
             System.out.println(item.id);
             System.out.println(item.name);
             System.out.println(item.data.price);
-            System.out.println(item.data.color);
             System.out.println("===============");
         }
     }

@@ -1,5 +1,8 @@
 package stepdefenitions;
 
+import java.util.List;
+import java.util.Map;
+
 import org.json.JSONObject;
 import org.testng.Assert;
 
@@ -7,27 +10,33 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import apiengine.Assertion;
+import apiengine.Endpoints;
 import io.cucumber.java.Before;
+import io.cucumber.java.an.E;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import model.request.AddItem;
 import model.response.ResponseItem;
+import resource.DataRequest;
 
 public class StepDefenitions {
     RequestSpecification requestSpecification;
     String idObject;
     private AddItem addItem;
     private ResponseItem responseItem;
+    private DataRequest dataRequest;
+    private String json;
+    private Assertion assertion;
+    private Endpoints endpoints;
 
     @Before
     public void setUp(){
-        RestAssured.baseURI = "https://api.restful-api.dev/objects";
-        requestSpecification = RestAssured.given();
+        endpoints = new Endpoints();
     }
 
     @Given("A list of item are available")
@@ -35,8 +44,7 @@ public class StepDefenitions {
         /*
          * Get response dari request 
          */
-        Response response = requestSpecification
-                            .get();
+        Response response = endpoints.getAllItems();
 
         /*
          * Get response dari request
@@ -48,17 +56,16 @@ public class StepDefenitions {
         System.out.println("Response: " + response.asPrettyString());
     }
 
-    @When("I add item to list")
-    public void i_add_item_to_list() throws JsonMappingException, JsonProcessingException {
-        String json = "{\n" + //
-                        "   \"name\": \"Apple MacBook Pro 16\",\n" + //
-                        "   \"data\": {\n" + //
-                        "      \"year\": 2019,\n" + //
-                        "      \"price\": 1849.99,\n" + //
-                        "      \"CPU model\": \"Intel Core i9\",\n" + //
-                        "      \"Hard disk size\": \"1 TB\"\n" + //
-                        "   }\n" + //
-                        "}";
+    @When("I add item to list {string}")
+    public void i_add_item_to_list(String payload) throws JsonMappingException, JsonProcessingException {
+        dataRequest = new DataRequest();
+
+        for(Map.Entry<String, String> entry : dataRequest.addItemCollection().entrySet()){
+            if (entry.getKey().equals(payload)) {
+                json = entry.getValue();
+                break;
+            }
+        }
         
         // Create ObjectMapper instance
         ObjectMapper objectMapper = new ObjectMapper();
@@ -66,55 +73,24 @@ public class StepDefenitions {
         //request
         addItem = objectMapper.readValue(json, AddItem.class);
 
-
-        Response response = requestSpecification
-                            .body(json)
-                            .contentType("application/json")
-                            .post();
-
-        System.out.println("albert"+response.asPrettyString());  
-        System.out.println("Hasil post : " + response.asPrettyString());
+        Response response = endpoints.addItem(json);
 
         //response
         JsonPath jsonPath = response.jsonPath();
         responseItem = jsonPath.getObject("", ResponseItem.class);
 
-        //  Create a JSONObject from the string
-        // JSONObject jsonResponse = new JSONObject(response.asString());
-        
-        /*
-         * {
-                "id": "ff808181932badb6019363648536115e",
-                "name": "Apple MacBook Pro 16",
-                "createdAt": "2024-11-25T12:55:52.374+00:00",
-                "data": {
-                    "year": 2019,
-                    "CPU Model": "Intel Core i9",
-                    "price": 19000,
-                    "Hard disk size": "1 TB"
-                }
-            }
-         */
-
-        //Assertion
-        Assert.assertNotNull(responseItem.id);
-        Assert.assertEquals(responseItem.data.year, addItem.data.year);
-        Assert.assertEquals(responseItem.data.cpumodel, addItem.data.cpumodel);
-        Assert.assertEquals(responseItem.data.price, addItem.data.price);
-        Assert.assertEquals(responseItem.data.hardDiskSize, addItem.data.hardDiskSize);
+        assertion = new Assertion();
+        assertion.assertAddItem(responseItem, addItem);
 
         idObject = responseItem.id;
     }
 
     @Then("The item is available")
     public void the_item_is_available() {
-        RestAssured.baseURI = "https://api.restful-api.dev/objects/" + idObject;
-        RequestSpecification requestSpecification = RestAssured.given();
         /*
          * Get response dari request 
          */
-        Response response = requestSpecification
-                            .get();
+        Response response = endpoints.getSpesificItem(idObject);
 
         /*
          * Get response dari request
@@ -122,72 +98,33 @@ public class StepDefenitions {
          * - Response body
          */
         int statusCode = response.getStatusCode();
-        System.out.println("Statuscode : " + statusCode);
-        System.out.println("Response-deleted: " + response.asPrettyString());
-
-
-        /*
-         * Extract value dari API
-         * [
-                {
-                    "id": "3",
-                    "name": "Apple iPhone 12 Pro Max",
-                    "data": {
-                        "color": "Cloudy White",
-                        "capacity GB": 512
-                    }
-                },
-                {
-                    "id": "5",
-                    "name": "Samsung Galaxy Z Fold2",
-                    "data": {
-                        "price": 689.99,
-                        "color": "Brown"
-                    }
-                }
-            ]
-            
-            - Get Id, name, data
-         */
-
-         //  Create a JSONObject from the string
-        // JSONObject jsonResponse = new JSONObject(response.asString());
-
-        //Nambahin assertion
-
-
+        Assert.assertEquals(statusCode, 200);
+        Assert.assertNotEquals(response, 0);
     }
 
-    @Then("I can update that item")
-    public void i_can_update_that_item() {
-        RestAssured.baseURI = "https://api.restful-api.dev/objects/" + idObject;
-        RequestSpecification requestSpecification = RestAssured.given();
-        String json = "{\n" + //
-                        "   \"name\": \"Apple MacBook Pro 16\",\n" + //
-                        "   \"data\": {\n" + //
-                        "      \"year\": 2019,\n" + //
-                        "      \"price\": 2050,\n" + //
-                        "      \"CPU model\": \"Intel Core i9\",\n" + //
-                        "      \"Hard disk size\": \"1 TB\",\n" + //
-                        "      \"color\": \"silver\"\n" + //
-                        "   }\n" + //
-                        "}";
+    @Then("I can update item {string}")
+    public void i_can_update_that_item(String payload) {
+        dataRequest = new DataRequest();
 
-        Response response = requestSpecification
-                            .body(json)
-                            .contentType("application/json")
-                            .put();
-        System.out.println("Hasilnya albert - updated : "+ response.asPrettyString());
+        for(Map.Entry<String, String> entry : dataRequest.updateItemCollection().entrySet()){
+            System.out.println("ini hasilnya"+entry.getKey());
+            if (entry.getKey().equals(payload)) {
+                json = entry.getValue();
+                break;
+            }
+        }
 
-        //  Create a JSONObject from the string
-        JSONObject jsonResponse = new JSONObject(response.asString());
+        //Update Item
+        endpoints.updateItem(json, idObject);
 
-        //Assertion
-        Assert.assertNotNull(jsonResponse.getString("id"));
-        Assert.assertEquals(jsonResponse.getJSONObject("data").getInt("year"), 2019);
-        Assert.assertEquals(jsonResponse.getJSONObject("data").getString("CPU model"), "Intel Core i9");
-        Assert.assertEquals(jsonResponse.getJSONObject("data").getDouble("price"), 2050);
-        Assert.assertEquals(jsonResponse.getJSONObject("data").getString("Hard disk size"), "1 TB");
+        //Verify Item
+        Response response = endpoints.getSpesificItem(idObject);
+
+        JsonPath jsonPath = response.jsonPath();
+
+        // //Deserialize JSON to Object 
+        List<ResponseItem> gItems = jsonPath.getList("", ResponseItem.class);
+        assertion.assertAvailableItem(gItems, addItem, idObject);
     }
 
     @When("I delete that item")
@@ -195,10 +132,7 @@ public class StepDefenitions {
          /*
          * Get response dari request 
          */
-        Response response = requestSpecification
-                            .pathParams("id", idObject)
-                            .contentType("application/json")
-                            .delete("{id}");
+        Response response = endpoints.deleteItem(idObject);
 
         /*
          * Get response dari request
@@ -219,13 +153,11 @@ public class StepDefenitions {
 
     @Then("The item isn't available")
     public void the_item_isn_t_available() {
-        RestAssured.baseURI = "https://api.restful-api.dev/objects/" + idObject;
-        RequestSpecification requestSpecification = RestAssured.given();
+       
         /*
          * Get response dari request 
          */
-        Response response = requestSpecification
-                            .get();
+        Response response = endpoints.getSpesificItem(idObject);
 
         /*
          * Get response dari request
