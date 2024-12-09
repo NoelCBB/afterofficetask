@@ -3,11 +3,11 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2024-11-28T17:23:41.517Z",
+        "start_timestamp": "2024-12-09T04:13:04.649Z",
         "before": [
           {
             "result": {
-              "duration": 261243000,
+              "duration": 246178000,
               "status": "passed"
             },
             "match": {
@@ -15,129 +15,63 @@
             }
           }
         ],
-        "line": 11,
+        "line": 5,
         "name": "As a user I can add new data",
         "description": "",
-        "id": "end-to-end-simulation-test;as-a-user-i-can-add-new-data;;2",
+        "id": "end-to-end-simulation-test;as-a-user-i-can-add-new-data",
         "type": "scenario",
-        "keyword": "Scenario Outline",
+        "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 672545000,
+              "duration": 1322202000,
               "status": "passed"
-            },
-            "line": 5,
-            "name": "A list of item are available",
-            "match": {
-              "location": "stepdefenitions.StepDefenitions.a_list_of_item_are_available()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "error_message": "java.lang.RuntimeException: com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field \"error\" (class model.response.ResponseItem), not marked as ignorable (4 known properties: \"data\", \"id\", \"name\", \"createdAt\"])\n at [Source: (String)\"{\"error\":\"We are very sorry but you reached your limit of requests per day. Our current limit is equal to 100 requests per day. The reason for that is the fact that servers cost money and 200 requests per user per day is all that we can afford at the moment. Tomorrow the limit will reset and you will be able to continue. Thanks and have a good day!\"}\"; line: 1, column: 11] (through reference chain: model.response.ResponseItem[\"error\"])\n\tat io.restassured.internal.path.json.mapping.JsonPathJackson2ObjectDeserializer.deserialize(JsonPathJackson2ObjectDeserializer.java:30)\n\tat io.restassured.internal.path.json.mapping.JsonObjectDeserializer.deserializeWithJackson2(JsonObjectDeserializer.java:93)\n\tat io.restassured.internal.path.json.mapping.JsonObjectDeserializer.deserialize(JsonObjectDeserializer.java:53)\n\tat io.restassured.path.json.JsonPath.jsonStringToObject(JsonPath.java:1093)\n\tat io.restassured.path.json.JsonPath.getObject(JsonPath.java:560)\n\tat stepdefenitions.StepDefenitions.i_add_item_to_list(StepDefenitions.java:80)\n\tat ✽.I add item to list \"addItem\"(file:///Users/bytedance/CourseQAAutomation/APIAdvance/apiautomationadvance/src/test/resources/features/End2End_Test.feature:6)\nCaused by: com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field \"error\" (class model.response.ResponseItem), not marked as ignorable (4 known properties: \"data\", \"id\", \"name\", \"createdAt\"])\n at [Source: (String)\"{\"error\":\"We are very sorry but you reached your limit of requests per day. Our current limit is equal to 100 requests per day. The reason for that is the fact that servers cost money and 200 requests per user per day is all that we can afford at the moment. Tomorrow the limit will reset and you will be able to continue. Thanks and have a good day!\"}\"; line: 1, column: 11] (through reference chain: model.response.ResponseItem[\"error\"])\n\tat com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61)\n\tat com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:1138)\n\tat com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:2224)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1709)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownVanilla(BeanDeserializerBase.java:1687)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:320)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:177)\n\tat com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323)\n\tat com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4825)\n\tat com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3772)\n\tat io.restassured.internal.path.json.mapping.JsonPathJackson2ObjectDeserializer.deserialize(JsonPathJackson2ObjectDeserializer.java:28)\n\tat io.restassured.internal.path.json.mapping.JsonObjectDeserializer.deserializeWithJackson2(JsonObjectDeserializer.java:93)\n\tat io.restassured.internal.path.json.mapping.JsonObjectDeserializer.deserialize(JsonObjectDeserializer.java:53)\n\tat io.restassured.path.json.JsonPath.jsonStringToObject(JsonPath.java:1093)\n\tat io.restassured.path.json.JsonPath.getObject(JsonPath.java:560)\n\tat stepdefenitions.StepDefenitions.i_add_item_to_list(StepDefenitions.java:80)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\tat io.cucumber.java.Invoker.invoke(Invoker.java:27)\n\tat io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)\n\tat io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)\n\tat io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)\n\tat io.cucumber.core.runner.TestStep.run(TestStep.java:49)\n\tat io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)\n\tat io.cucumber.core.runner.TestCase.run(TestCase.java:51)\n\tat io.cucumber.core.runner.Runner.runPickle(Runner.java:66)\n\tat io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:149)\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:83)\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:24)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:185)\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:83)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:219)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:93)\n\tat org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:530)\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:758)\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:453)\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:211)\n",
-              "duration": 341133000,
-              "status": "failed"
             },
             "line": 6,
-            "name": "I add item to list \"addItem\"",
+            "name": "A list of item are available",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"addItem\"",
-                  "offset": 19
-                }
-              ],
-              "location": "stepdefenitions.StepDefenitions.i_add_item_to_list(java.lang.String)"
+              "location": "stepdefenitions.StepDefenitions.a_list_of_item_are_available()"
             },
-            "keyword": "When "
+            "keyword": "Given "
           },
           {
             "result": {
-              "duration": 309000,
-              "status": "skipped"
+              "error_message": "io.cucumber.core.exception.CucumberException: Step [I add item to list] is defined with 4 parameters at \u0027stepdefenitions.StepDefenitions.i_add_item_to_list(java.lang.String,double,double,double)\u0027.\nHowever, the gherkin step has 0 arguments.\nStep text: I add item to list\n\tat io.cucumber.core.runner.PickleStepDefinitionMatch.arityMismatch(PickleStepDefinitionMatch.java:134)\n\tat io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:42)\n\tat io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)\n\tat io.cucumber.core.runner.TestStep.run(TestStep.java:49)\n\tat io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)\n\tat io.cucumber.core.runner.TestCase.run(TestCase.java:51)\n\tat io.cucumber.core.runner.Runner.runPickle(Runner.java:66)\n\tat io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:149)\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:83)\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:24)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:185)\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:83)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:219)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:93)\n\tat org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:530)\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:758)\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:453)\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:211)\n",
+              "duration": 2524000,
+              "status": "failed"
             },
             "line": 7,
-            "name": "The item is available",
+            "name": "I add item to list",
             "match": {
-              "location": "stepdefenitions.StepDefenitions.the_item_is_available()"
-            },
-            "keyword": "Then "
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2024-11-28T17:23:42.835Z",
-        "before": [
-          {
-            "result": {
-              "duration": 422000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "stepdefenitions.StepDefenitions.setUp()"
-            }
-          }
-        ],
-        "line": 12,
-        "name": "As a user I can add new data",
-        "description": "",
-        "id": "end-to-end-simulation-test;as-a-user-i-can-add-new-data;;3",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 168946000,
-              "status": "passed"
-            },
-            "line": 5,
-            "name": "A list of item are available",
-            "match": {
-              "location": "stepdefenitions.StepDefenitions.a_list_of_item_are_available()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "error_message": "java.lang.RuntimeException: com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field \"error\" (class model.response.ResponseItem), not marked as ignorable (4 known properties: \"data\", \"id\", \"name\", \"createdAt\"])\n at [Source: (String)\"{\"error\":\"We are very sorry but you reached your limit of requests per day. Our current limit is equal to 100 requests per day. The reason for that is the fact that servers cost money and 200 requests per user per day is all that we can afford at the moment. Tomorrow the limit will reset and you will be able to continue. Thanks and have a good day!\"}\"; line: 1, column: 11] (through reference chain: model.response.ResponseItem[\"error\"])\n\tat io.restassured.internal.path.json.mapping.JsonPathJackson2ObjectDeserializer.deserialize(JsonPathJackson2ObjectDeserializer.java:30)\n\tat io.restassured.internal.path.json.mapping.JsonObjectDeserializer.deserializeWithJackson2(JsonObjectDeserializer.java:93)\n\tat io.restassured.internal.path.json.mapping.JsonObjectDeserializer.deserialize(JsonObjectDeserializer.java:53)\n\tat io.restassured.path.json.JsonPath.jsonStringToObject(JsonPath.java:1093)\n\tat io.restassured.path.json.JsonPath.getObject(JsonPath.java:560)\n\tat stepdefenitions.StepDefenitions.i_add_item_to_list(StepDefenitions.java:80)\n\tat ✽.I add item to list \"addItem2\"(file:///Users/bytedance/CourseQAAutomation/APIAdvance/apiautomationadvance/src/test/resources/features/End2End_Test.feature:6)\nCaused by: com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field \"error\" (class model.response.ResponseItem), not marked as ignorable (4 known properties: \"data\", \"id\", \"name\", \"createdAt\"])\n at [Source: (String)\"{\"error\":\"We are very sorry but you reached your limit of requests per day. Our current limit is equal to 100 requests per day. The reason for that is the fact that servers cost money and 200 requests per user per day is all that we can afford at the moment. Tomorrow the limit will reset and you will be able to continue. Thanks and have a good day!\"}\"; line: 1, column: 11] (through reference chain: model.response.ResponseItem[\"error\"])\n\tat com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61)\n\tat com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:1138)\n\tat com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:2224)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1709)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownVanilla(BeanDeserializerBase.java:1687)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:320)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:177)\n\tat com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323)\n\tat com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4825)\n\tat com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3772)\n\tat io.restassured.internal.path.json.mapping.JsonPathJackson2ObjectDeserializer.deserialize(JsonPathJackson2ObjectDeserializer.java:28)\n\tat io.restassured.internal.path.json.mapping.JsonObjectDeserializer.deserializeWithJackson2(JsonObjectDeserializer.java:93)\n\tat io.restassured.internal.path.json.mapping.JsonObjectDeserializer.deserialize(JsonObjectDeserializer.java:53)\n\tat io.restassured.path.json.JsonPath.jsonStringToObject(JsonPath.java:1093)\n\tat io.restassured.path.json.JsonPath.getObject(JsonPath.java:560)\n\tat stepdefenitions.StepDefenitions.i_add_item_to_list(StepDefenitions.java:80)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\tat io.cucumber.java.Invoker.invoke(Invoker.java:27)\n\tat io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)\n\tat io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)\n\tat io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)\n\tat io.cucumber.core.runner.TestStep.run(TestStep.java:49)\n\tat io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)\n\tat io.cucumber.core.runner.TestCase.run(TestCase.java:51)\n\tat io.cucumber.core.runner.Runner.runPickle(Runner.java:66)\n\tat io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:149)\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:83)\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:24)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:185)\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:83)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:219)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:93)\n\tat org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:530)\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:758)\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:453)\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:211)\n",
-              "duration": 153612000,
-              "status": "failed"
-            },
-            "line": 6,
-            "name": "I add item to list \"addItem2\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"addItem2\"",
-                  "offset": 19
-                }
-              ],
-              "location": "stepdefenitions.StepDefenitions.i_add_item_to_list(java.lang.String)"
+              "location": "stepdefenitions.StepDefenitions.i_add_item_to_list(java.lang.String,double,double,double)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 374000,
+              "duration": 2600000,
               "status": "skipped"
             },
-            "line": 7,
+            "line": 8,
             "name": "The item is available",
             "match": {
               "location": "stepdefenitions.StepDefenitions.the_item_is_available()"
             },
             "keyword": "Then "
           }
+        ],
+        "tags": [
+          {
+            "name": "@test1"
+          }
         ]
       },
       {
-        "start_timestamp": "2024-11-28T17:23:43.164Z",
+        "start_timestamp": "2024-12-09T04:13:06.311Z",
         "before": [
           {
             "result": {
-              "duration": 182000,
+              "duration": 957000,
               "status": "passed"
             },
             "match": {
@@ -145,19 +79,19 @@
             }
           }
         ],
-        "line": 22,
+        "line": 10,
         "name": "As a user I can update data",
         "description": "",
-        "id": "end-to-end-simulation-test;as-a-user-i-can-update-data;;2",
+        "id": "end-to-end-simulation-test;as-a-user-i-can-update-data",
         "type": "scenario",
-        "keyword": "Scenario Outline",
+        "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 157758000,
+              "duration": 796540000,
               "status": "passed"
             },
-            "line": 15,
+            "line": 11,
             "name": "A list of item are available",
             "match": {
               "location": "stepdefenitions.StepDefenitions.a_list_of_item_are_available()"
@@ -166,29 +100,23 @@
           },
           {
             "result": {
-              "error_message": "java.lang.RuntimeException: com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field \"error\" (class model.response.ResponseItem), not marked as ignorable (4 known properties: \"data\", \"id\", \"name\", \"createdAt\"])\n at [Source: (String)\"{\"error\":\"We are very sorry but you reached your limit of requests per day. Our current limit is equal to 100 requests per day. The reason for that is the fact that servers cost money and 200 requests per user per day is all that we can afford at the moment. Tomorrow the limit will reset and you will be able to continue. Thanks and have a good day!\"}\"; line: 1, column: 11] (through reference chain: model.response.ResponseItem[\"error\"])\n\tat io.restassured.internal.path.json.mapping.JsonPathJackson2ObjectDeserializer.deserialize(JsonPathJackson2ObjectDeserializer.java:30)\n\tat io.restassured.internal.path.json.mapping.JsonObjectDeserializer.deserializeWithJackson2(JsonObjectDeserializer.java:93)\n\tat io.restassured.internal.path.json.mapping.JsonObjectDeserializer.deserialize(JsonObjectDeserializer.java:53)\n\tat io.restassured.path.json.JsonPath.jsonStringToObject(JsonPath.java:1093)\n\tat io.restassured.path.json.JsonPath.getObject(JsonPath.java:560)\n\tat stepdefenitions.StepDefenitions.i_add_item_to_list(StepDefenitions.java:80)\n\tat ✽.I add item to list \"addItem\"(file:///Users/bytedance/CourseQAAutomation/APIAdvance/apiautomationadvance/src/test/resources/features/End2End_Test.feature:16)\nCaused by: com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field \"error\" (class model.response.ResponseItem), not marked as ignorable (4 known properties: \"data\", \"id\", \"name\", \"createdAt\"])\n at [Source: (String)\"{\"error\":\"We are very sorry but you reached your limit of requests per day. Our current limit is equal to 100 requests per day. The reason for that is the fact that servers cost money and 200 requests per user per day is all that we can afford at the moment. Tomorrow the limit will reset and you will be able to continue. Thanks and have a good day!\"}\"; line: 1, column: 11] (through reference chain: model.response.ResponseItem[\"error\"])\n\tat com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61)\n\tat com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:1138)\n\tat com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:2224)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1709)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownVanilla(BeanDeserializerBase.java:1687)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:320)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:177)\n\tat com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323)\n\tat com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4825)\n\tat com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3772)\n\tat io.restassured.internal.path.json.mapping.JsonPathJackson2ObjectDeserializer.deserialize(JsonPathJackson2ObjectDeserializer.java:28)\n\tat io.restassured.internal.path.json.mapping.JsonObjectDeserializer.deserializeWithJackson2(JsonObjectDeserializer.java:93)\n\tat io.restassured.internal.path.json.mapping.JsonObjectDeserializer.deserialize(JsonObjectDeserializer.java:53)\n\tat io.restassured.path.json.JsonPath.jsonStringToObject(JsonPath.java:1093)\n\tat io.restassured.path.json.JsonPath.getObject(JsonPath.java:560)\n\tat stepdefenitions.StepDefenitions.i_add_item_to_list(StepDefenitions.java:80)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\tat io.cucumber.java.Invoker.invoke(Invoker.java:27)\n\tat io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)\n\tat io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)\n\tat io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)\n\tat io.cucumber.core.runner.TestStep.run(TestStep.java:49)\n\tat io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)\n\tat io.cucumber.core.runner.TestCase.run(TestCase.java:51)\n\tat io.cucumber.core.runner.Runner.runPickle(Runner.java:66)\n\tat io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:149)\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:83)\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:24)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:185)\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:83)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:219)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:93)\n\tat org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:530)\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:758)\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:453)\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:211)\n",
-              "duration": 157469000,
+              "error_message": "io.cucumber.core.exception.CucumberException: Step [I add item to list] is defined with 4 parameters at \u0027stepdefenitions.StepDefenitions.i_add_item_to_list(java.lang.String,double,double,double)\u0027.\nHowever, the gherkin step has 0 arguments.\nStep text: I add item to list\n\tat io.cucumber.core.runner.PickleStepDefinitionMatch.arityMismatch(PickleStepDefinitionMatch.java:134)\n\tat io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:42)\n\tat io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)\n\tat io.cucumber.core.runner.TestStep.run(TestStep.java:49)\n\tat io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)\n\tat io.cucumber.core.runner.TestCase.run(TestCase.java:51)\n\tat io.cucumber.core.runner.Runner.runPickle(Runner.java:66)\n\tat io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:149)\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:83)\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:24)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:185)\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:83)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:219)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:93)\n\tat org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:530)\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:758)\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:453)\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:211)\n",
+              "duration": 954000,
               "status": "failed"
             },
-            "line": 16,
-            "name": "I add item to list \"addItem\"",
+            "line": 12,
+            "name": "I add item to list",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"addItem\"",
-                  "offset": 19
-                }
-              ],
-              "location": "stepdefenitions.StepDefenitions.i_add_item_to_list(java.lang.String)"
+              "location": "stepdefenitions.StepDefenitions.i_add_item_to_list(java.lang.String,double,double,double)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 305000,
+              "duration": 1407000,
               "status": "skipped"
             },
-            "line": 17,
+            "line": 13,
             "name": "The item is available",
             "match": {
               "location": "stepdefenitions.StepDefenitions.the_item_is_available()"
@@ -197,254 +125,13 @@
           },
           {
             "result": {
-              "duration": 276000,
+              "duration": 242000,
               "status": "skipped"
             },
-            "line": 18,
-            "name": "I can update item \"updateItem\"",
+            "line": 14,
+            "name": "I can update item",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"updateItem\"",
-                  "offset": 18
-                }
-              ],
-              "location": "stepdefenitions.StepDefenitions.i_can_update_that_item(java.lang.String)"
-            },
-            "keyword": "Then "
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2024-11-28T17:23:43.487Z",
-        "before": [
-          {
-            "result": {
-              "duration": 161000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "stepdefenitions.StepDefenitions.setUp()"
-            }
-          }
-        ],
-        "line": 23,
-        "name": "As a user I can update data",
-        "description": "",
-        "id": "end-to-end-simulation-test;as-a-user-i-can-update-data;;3",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 215796000,
-              "status": "passed"
-            },
-            "line": 15,
-            "name": "A list of item are available",
-            "match": {
-              "location": "stepdefenitions.StepDefenitions.a_list_of_item_are_available()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "error_message": "java.lang.RuntimeException: com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field \"error\" (class model.response.ResponseItem), not marked as ignorable (4 known properties: \"data\", \"id\", \"name\", \"createdAt\"])\n at [Source: (String)\"{\"error\":\"We are very sorry but you reached your limit of requests per day. Our current limit is equal to 100 requests per day. The reason for that is the fact that servers cost money and 200 requests per user per day is all that we can afford at the moment. Tomorrow the limit will reset and you will be able to continue. Thanks and have a good day!\"}\"; line: 1, column: 11] (through reference chain: model.response.ResponseItem[\"error\"])\n\tat io.restassured.internal.path.json.mapping.JsonPathJackson2ObjectDeserializer.deserialize(JsonPathJackson2ObjectDeserializer.java:30)\n\tat io.restassured.internal.path.json.mapping.JsonObjectDeserializer.deserializeWithJackson2(JsonObjectDeserializer.java:93)\n\tat io.restassured.internal.path.json.mapping.JsonObjectDeserializer.deserialize(JsonObjectDeserializer.java:53)\n\tat io.restassured.path.json.JsonPath.jsonStringToObject(JsonPath.java:1093)\n\tat io.restassured.path.json.JsonPath.getObject(JsonPath.java:560)\n\tat stepdefenitions.StepDefenitions.i_add_item_to_list(StepDefenitions.java:80)\n\tat ✽.I add item to list \"addItem2\"(file:///Users/bytedance/CourseQAAutomation/APIAdvance/apiautomationadvance/src/test/resources/features/End2End_Test.feature:16)\nCaused by: com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field \"error\" (class model.response.ResponseItem), not marked as ignorable (4 known properties: \"data\", \"id\", \"name\", \"createdAt\"])\n at [Source: (String)\"{\"error\":\"We are very sorry but you reached your limit of requests per day. Our current limit is equal to 100 requests per day. The reason for that is the fact that servers cost money and 200 requests per user per day is all that we can afford at the moment. Tomorrow the limit will reset and you will be able to continue. Thanks and have a good day!\"}\"; line: 1, column: 11] (through reference chain: model.response.ResponseItem[\"error\"])\n\tat com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61)\n\tat com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:1138)\n\tat com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:2224)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1709)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownVanilla(BeanDeserializerBase.java:1687)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:320)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:177)\n\tat com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323)\n\tat com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4825)\n\tat com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3772)\n\tat io.restassured.internal.path.json.mapping.JsonPathJackson2ObjectDeserializer.deserialize(JsonPathJackson2ObjectDeserializer.java:28)\n\tat io.restassured.internal.path.json.mapping.JsonObjectDeserializer.deserializeWithJackson2(JsonObjectDeserializer.java:93)\n\tat io.restassured.internal.path.json.mapping.JsonObjectDeserializer.deserialize(JsonObjectDeserializer.java:53)\n\tat io.restassured.path.json.JsonPath.jsonStringToObject(JsonPath.java:1093)\n\tat io.restassured.path.json.JsonPath.getObject(JsonPath.java:560)\n\tat stepdefenitions.StepDefenitions.i_add_item_to_list(StepDefenitions.java:80)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\tat io.cucumber.java.Invoker.invoke(Invoker.java:27)\n\tat io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)\n\tat io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)\n\tat io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)\n\tat io.cucumber.core.runner.TestStep.run(TestStep.java:49)\n\tat io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)\n\tat io.cucumber.core.runner.TestCase.run(TestCase.java:51)\n\tat io.cucumber.core.runner.Runner.runPickle(Runner.java:66)\n\tat io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:149)\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:83)\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:24)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:185)\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:83)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:219)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:93)\n\tat org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:530)\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:758)\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:453)\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:211)\n",
-              "duration": 219779000,
-              "status": "failed"
-            },
-            "line": 16,
-            "name": "I add item to list \"addItem2\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"addItem2\"",
-                  "offset": 19
-                }
-              ],
-              "location": "stepdefenitions.StepDefenitions.i_add_item_to_list(java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 302000,
-              "status": "skipped"
-            },
-            "line": 17,
-            "name": "The item is available",
-            "match": {
-              "location": "stepdefenitions.StepDefenitions.the_item_is_available()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 288000,
-              "status": "skipped"
-            },
-            "line": 18,
-            "name": "I can update item \"updateItem2\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"updateItem2\"",
-                  "offset": 18
-                }
-              ],
-              "location": "stepdefenitions.StepDefenitions.i_can_update_that_item(java.lang.String)"
-            },
-            "keyword": "Then "
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2024-11-28T17:23:43.941Z",
-        "before": [
-          {
-            "result": {
-              "duration": 379000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "stepdefenitions.StepDefenitions.setUp()"
-            }
-          }
-        ],
-        "line": 34,
-        "name": "As a user I can delete data",
-        "description": "",
-        "id": "end-to-end-simulation-test;as-a-user-i-can-delete-data;;2",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 152940000,
-              "status": "passed"
-            },
-            "line": 26,
-            "name": "A list of item are available",
-            "match": {
-              "location": "stepdefenitions.StepDefenitions.a_list_of_item_are_available()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "status": "undefined"
-            },
-            "line": 27,
-            "name": "I add item to list",
-            "match": {},
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "undefined"
-            },
-            "line": 28,
-            "name": "The item is available \"addItem\"",
-            "match": {},
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 241000,
-              "status": "skipped"
-            },
-            "line": 29,
-            "name": "I delete that item",
-            "match": {
-              "location": "stepdefenitions.StepDefenitions.i_delete_that_item()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 313000,
-              "status": "skipped"
-            },
-            "line": 30,
-            "name": "The item isn\u0027t available",
-            "match": {
-              "location": "stepdefenitions.StepDefenitions.the_item_isn_t_available()"
-            },
-            "keyword": "Then "
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2024-11-28T17:23:44.132Z",
-        "before": [
-          {
-            "result": {
-              "duration": 165000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "stepdefenitions.StepDefenitions.setUp()"
-            }
-          }
-        ],
-        "line": 35,
-        "name": "As a user I can delete data",
-        "description": "",
-        "id": "end-to-end-simulation-test;as-a-user-i-can-delete-data;;3",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 1148969000,
-              "status": "passed"
-            },
-            "line": 26,
-            "name": "A list of item are available",
-            "match": {
-              "location": "stepdefenitions.StepDefenitions.a_list_of_item_are_available()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "status": "undefined"
-            },
-            "line": 27,
-            "name": "I add item to list",
-            "match": {},
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "undefined"
-            },
-            "line": 28,
-            "name": "The item is available \"addItem2\"",
-            "match": {},
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 330000,
-              "status": "skipped"
-            },
-            "line": 29,
-            "name": "I delete that item",
-            "match": {
-              "location": "stepdefenitions.StepDefenitions.i_delete_that_item()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 303000,
-              "status": "skipped"
-            },
-            "line": 30,
-            "name": "The item isn\u0027t available",
-            "match": {
-              "location": "stepdefenitions.StepDefenitions.the_item_isn_t_available()"
+              "location": "stepdefenitions.StepDefenitions.i_can_update_that_item()"
             },
             "keyword": "Then "
           }

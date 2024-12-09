@@ -71,12 +71,12 @@ public class RestAssuredTest2 {
         List<ResponseItem> gItems = jsonPath.getList("", ResponseItem.class);
         System.out.println("Result Item" + gItems);
 
-        for (ResponseItem item : gItems) {
-            System.out.println("===============");
-            System.out.println(item.id);
-            System.out.println(item.name);
-            System.out.println(item.data.price);
-            System.out.println("===============");
-        }
+        // for (ResponseItem item : gItems) {
+        //     System.out.println("===============");
+        //     System.out.println(item.id);
+        //     System.out.println(item.name);
+        //     System.out.println(item.data.price);
+        //     System.out.println("===============");
+        // }
     }
 }

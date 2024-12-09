@@ -3,24 +3,21 @@ package model.request;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class UpdateItem {
-    @JsonProperty("name")
-    public String name;
+    @JsonProperty("title")
+    public String title;
 
-    @JsonProperty("data")
-    public Data data;
+    @JsonProperty("dimensions")
+    public Data dimensions;
 
     public static class Data {
-        @JsonProperty("year")
-        public String year;
+        @JsonProperty("width")
+        public String width;
 
-        @JsonProperty("price")
-        public String price;
+        @JsonProperty("height")
+        public String height;
 
-        @JsonProperty("CPU model")
-        public String cpumodel;
-
-        @JsonProperty("Hard disk size")
-        public String hardDiskSize;
+        @JsonProperty("depth")
+        public String depth;
         
     }   
 }

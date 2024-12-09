@@ -10,10 +10,9 @@ import model.response.ResponseItem;
 public class Assertion {
     public void assertAddItem(ResponseItem responseItem, AddItem addItem){
         Assert.assertNotNull(responseItem.id);
-        Assert.assertEquals(responseItem.data.year, addItem.data.year);
-        Assert.assertEquals(responseItem.data.cpumodel, addItem.data.cpumodel);
-        Assert.assertEquals(responseItem.data.price, addItem.data.price);
-        Assert.assertEquals(responseItem.data.hardDiskSize, addItem.data.hardDiskSize);
+        Assert.assertEquals(responseItem.dimensions.width, addItem.dimensions.width);
+        Assert.assertEquals(responseItem.dimensions.height, addItem.dimensions.height);
+        Assert.assertEquals(responseItem.dimensions.depth, addItem.dimensions.depth);
 
     }
 
@@ -21,10 +20,10 @@ public class Assertion {
         for (ResponseItem item : gItems) {
             System.out.println("===============");
             if (item.id == idObject) {
-                Assert.assertEquals(item.data.year, request.data.year);
-                Assert.assertEquals(item.data.price, request.data.price);
-                Assert.assertEquals(item.data.cpumodel, request.data.cpumodel);
-                Assert.assertEquals(item.data.hardDiskSize, request.data.hardDiskSize);
+                Assert.assertNotNull("id");
+                Assert.assertEquals(item.dimensions.width, request.dimensions.width);
+                Assert.assertEquals(item.dimensions.height, request.dimensions.height);
+                Assert.assertEquals(item.dimensions.depth, request.dimensions.depth);
             }
             System.out.println("===============");
         }
